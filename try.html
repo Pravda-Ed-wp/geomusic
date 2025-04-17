@@ -1,0 +1,118 @@
+<template>
+    <div>
+      <div class="mapChart" id="mainChart" :style="dHeight"></div>
+    </div>
+  </template>
+  
+  <script>
+  import china from "js2/china2.json";
+  export default {
+    name: "PieChart",
+    data() {
+      return {
+        dHeight: {
+          height: "",
+        },
+      };
+    },
+    methods: {
+      //定义方法，获取高度减去头尾
+      getHeight() {
+        this.dHeight.height = window.innerHeight - 80 + "px";
+      },
+    },
+    created() {
+      //页面创建时执行一次getHeight进行赋值，顺道绑定resize事件
+      window.addEventListener("resize", this.getHeight);
+      this.getHeight();
+    },
+    mounted() {
+      const myChart = this.$echarts.init(document.getElementById("mainChart"));
+      this.$echarts.registerMap("china", china);
+      this.$axios.get("https://4951ee4868.oicp.vip/loc/").then((res) => {
+        // console.log("mapData", res);
+        let option = {
+          title: {
+            text: "发货地分布情况",
+            top:"10px",
+            left: "center",
+            textStyle: {
+              color: "white",
+            },
+          },
+  
+          tooltip: {
+            formatter: function (params) {
+              return (
+                params.seriesName + "<br />" + params.name + "：" + params.value
+              );
+            }, //数据格式化
+          },
+          visualMap: {
+            min: 0,
+            max: 2000,
+            // left: "10px",
+             left: "left",
+            top: "bottom",
+            text: ["高", "低"], //取值范围的文字
+            textStyle: {
+              color: "white",
+            },
+            inRange: {
+              color: ["#e0ffff", "rgba(0,60,153,0.8)"], //取值范围的颜色
+            },
+            show: true, //图注
+          },
+          geo: {
+            map: "china",
+            roam: false, //不开启缩放和平移
+            zoom: 1.23, //视角缩放比例
+            label: {
+              normal: {
+                show: true,
+                fontSize: "10",
+                color: "rgba(0,0,0,0.7)",
+              },
+            },
+            itemStyle: {
+              normal: {
+                // borderColor: "rgba(0, 0, 0, 0.2)",
+                //  areaColor: 'rgba(0,60,153,0.8)',
+                borderColor: "#02c0ff",
+              },
+              emphasis: {
+                areaColor: "#F3B329", //鼠标选择区域颜色
+                shadowOffsetX: 0,
+                shadowOffsetY: 0,
+                shadowBlur: 20,
+                borderWidth: 0,
+                shadowColor: "rgba(0, 0, 0, 0.5)",
+              },
+            },
+          },
+          series: [
+            {
+              name: "店铺数量",
+              type: "map",
+              geoIndex: 0,
+              data: res.data,
+            },
+          ],
+        };
+  
+        myChart.setOption(option);
+      });
+  
+      window.addEventListener("resize", function () {
+        myChart.resize();
+      });
+    },
+  };
+  </script>
+  
+  <style>
+  .mapChart{
+    background-color: #182c4d;
+  
+  }
+  </style>
