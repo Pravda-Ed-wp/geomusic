@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11372697",
+      "name": "声音关闭",
+      "font_class": "shengyinguanbi",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "11372700",
+      "name": "声音",
+      "font_class": "shengyin",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    }
+  ]
+}
