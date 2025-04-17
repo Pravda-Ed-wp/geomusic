@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5530350",
+      "name": "音符SVG-86",
+      "font_class": "yinfuSVG-",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    }
+  ]
+}

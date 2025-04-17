@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "iconfont3";/* Project id  */
+  src: url('iconfont.ttf?t=1744764337904') format('truetype');
+}
+
+.iconfont3{
+  font-family: "iconfont3" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yinfuSVG-:before {
+  content: "\e66b";
+}
+
