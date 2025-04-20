@@ -1,0 +1,1057 @@
+<!doctype html>
+<html>
+<head>
+<title>民族音乐介绍</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>#chart-panel {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 20px;
+                bottom: 0;
+            }
+/* CSS Document */
+*{
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box}
+*,body{padding:0px; margin:0px;font-family: "微软雅黑";}
+body{color:#fff;font-size: 16px; background: #033c76;
+    background: -webkit-radial-gradient(50% 35%, farthest-corner,#034f8e,#034987,#02366d,#002353);
+    background: radial-gradient(50% 35%, farthest-corner,#034f8e,#034987,#02366d,#002353);
+}
+html,body{height: 100%;}
+@font-face {
+			  font-family: 'iconfont';
+			  src: url('font/iconfont.woff2?t=1651660703904') format('woff2'),
+			       url('font/iconfont.woff?t=1651660703904') format('woff'),
+			       url('font/iconfont.ttf?t=1651660703904') format('truetype');
+			}
+			.iconfont {
+			  font-family: "iconfont";
+			  font-size: 20px;
+			  font-style: normal;
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			}
+            /* defaults */
+/* =============================================== */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --light: hsl(0, 0%, 100%);
+  --background: linear-gradient(to right bottom, hsl(236, 50%, 50%), hsl(195, 50%, 50%));
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+}
+
+a,
+a:link {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+/* modal */
+/* =============================================== */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: hsla(0, 0%, 40%, .6);
+}
+
+/* using :target */
+.modal-container:target {
+  display: flex;
+}
+
+.modal {
+  width: 60rem;
+  padding: 4rem 2rem;
+  border-radius: .8rem;
+
+  color: var(--light);
+  background: var(--background);
+  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
+  position: relative;
+
+  overflow: hidden;
+}
+
+.modal__details {
+  text-align: center;
+
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, .4);
+}
+
+.modal__title {
+  font-size: 3.2rem;
+}
+
+.modal__description {
+  margin-top: 2rem;
+
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.modal__text {
+  padding: 0 4rem;
+  margin-bottom: 4rem;
+
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.modal__text::before {
+  content: '';
+
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid hsla(0, 0%, 100%, .2);
+  border-radius: 100rem;
+
+  pointer-events: none;
+}
+
+.modal__btn {
+  padding: 1rem 5.8rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 100rem;
+
+  color: inherit;
+  background: transparent;
+  font-size: 1.4rem;
+  font-family: inherit;
+  letter-spacing: .1rem;
+
+  transition: .2s;
+  cursor: pointer;
+  margin-bottom:1rem ;
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+  border-color: hsla(0, 0%, 100%, .6);
+  transform: translateY(-.2rem);
+}
+
+/* links */
+/* =============================================== */
+.link-1 {
+  font-size: 1.8rem;
+
+  color: var(--light);
+  background: var(--background);
+  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
+  border-radius: 100rem;
+  padding: 1.4rem 3.2rem;
+
+  transition: .2s;
+}
+
+.link-1:hover,
+.link-1:focus {
+  transform: translateY(-.2rem);
+  box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, 0.4);
+}
+
+.link-2 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 100rem;
+
+  color: inherit;
+  font-size: 2.2rem;
+
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .2s;
+}
+
+.link-2::before {
+  content: '×';
+
+  transform: translateY(-.1rem);
+}
+
+.link-2:hover,
+.link-2:focus {
+  border-color: hsla(0, 0%, 100%, .6);
+  transform: translateY(-.2rem);
+}
+
+/* Second Version Link */
+/* =============================================== */
+.second-version-link,
+.second-version-link:link {
+  color: hsl(236, 50%, 50%);
+  padding: .8rem 1.6rem .8rem .2rem;
+  border-bottom: 2px solid hsl(236, 50%, 50%);
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+
+.second-version-link::after {
+  content: '\2197';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-size: .9em;
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 1.6rem;
+}
+</style>
+<script src="https://lib.baomitu.com/echarts/4.8.0/echarts.min.js"></script>
+<script src=""></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="font2/iconfont.css">
+</head>
+
+<body translate="no">
+
+<div class="head clearfix">
+
+
+	<h1 class="pulll_left">民 族 音 乐 介 绍</h1>
+		<div class="menu menu2 pulll_left">
+		<ul>      
+			<li><a href="index.html">
+			<span class="iconfont">&#xe648;</span>
+			</a>
+			</li>
+			<li><a href="CNmusic.html">
+			<span class="iconfont">&#xe737;</span>
+			</a>
+			</li>
+			<li><a href="demo.html">
+            <span class="iconfont3">&#xe66b;</span>
+			</a>
+			</li>
+			<li>
+                <a href="#modal-opened" class="link-1" id="modal-closed">网页介绍</a>
+            </li>
+		</ul>
+		</div>
+		
+		<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		<script>
+		t = new Date();
+		var y=t.getFullYear();
+		var mt=t.getMonth()+1;
+		var day=t.getDate();
+        var h=t.getHours();//获取时
+        var m=t.getMinutes();//获取分
+        var s=t.getSeconds();//获取秒
+        document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+		    t = setTimeout(time,1000);//開始运行
+		    function time()
+		    {
+		       clearTimeout(t);//清除定时器
+		       dt = new Date();
+				var y=dt.getFullYear();
+				var mt=dt.getMonth()+1;
+				var day=dt.getDate();
+		       var h=dt.getHours();//获取时
+		       var m=dt.getMinutes();//获取分
+		       var s=dt.getSeconds();//获取秒
+		       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+		       t = setTimeout(time,1000); //设定定时器，循环运行     
+		    } 
+		
+		</script>
+			</div>
+
+        <div class="modal-container" id="modal-opened">
+            <div class="modal">
+        
+            <div class="modal__details">
+                <h1 class="modal__title">网页指南</h1>
+                <p class="modal__description">该网页分为两部分：民族音乐介绍和音乐文化研究</p>
+            </div>
+        
+            <p class="modal__text">网页通过思维导图的形式介绍民族音乐的基本概念与重要研究项目，并简单解读了相关的历史发展过程。点击右下角切换主题，将鼠标悬停于右侧页面的小圆点上可显示详细内容。</p>
+        
+            <button class="modal__btn" onclick="gotopage('https://china.rymusic.art/')" style="width: 26rem;">民乐出版工程平台 &rarr;</button>
+            <button class="modal__btn" onclick="gotopage('https://www.ctmsa-cnaa.com/#/')"style="width: 28rem;">传统音乐录音档案 &rarr;</button>
+            
+            <a href="#modal-closed" class="link-2"></a>
+        
+            </div>
+        </div>
+              
+<div id="chart-panel" style="margin-top:45px;"></div>
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <script type="text/javascript">
+        function gotopage(url)
+        {
+            window.open(url);
+        }
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('chart-panel'));
+option = {
+            xAxis: {
+                min: 0,
+                max: 1000,
+                show: false,
+                type: 'value'
+            },
+            yAxis: {
+                min: 0,
+                max: 1000,
+                show: false,
+                type: 'value'
+            },     	 
+            legend:{
+                left:'right',
+                top:'bottom',
+                orient:'vertical',
+                selectedMode:'single',
+                textStyle:{
+                    color:'write',
+                    fontSize:18
+                },
+                data:[{
+                    name:'民族音乐介绍'
+                },{
+                    name:'音乐文化研究'
+                }]
+            },
+            tooltip:{
+                enterable: true,
+                textStyle: {
+                    color: 'black',
+                    decoration: 'none',
+                },
+            },
+            series:[{
+                name:'民族音乐介绍',
+                type:'graph',
+                draggable: false,
+                coordinateSystem: "cartesian2d",
+                itemStyle:{
+                    color:'cyan'
+                },
+                label:{
+                    show:true,
+                    position:'right',
+                    fontSize:28
+                },
+                data:[{
+                    name:'五声调式',
+                    value:[250,900],
+                    symbolSize:80,
+                    label:{
+                        position:'left',
+                        offset:[-50,0]
+                    },
+                    tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:50px;border-radius:5px;color:pink">' +
+                                      ' 五声调式'+
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    }
+                },{
+                    name:'中国民族音乐特色调式',
+                    value:[650,900],
+                    symbolSize:20,
+                    label:{offset:[10,0]},
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: 'cyan',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:90px;width:450px;border-radius:5px;background:rgba(50,50,50,0.3);color:white;">' +
+                                      ' 五声调式是中国传统音乐中由宫、商、角、徵、羽五个音组成的音阶体系，'+
+                                      '<br> 因其无半音关系而具有和谐、流畅的民族音乐特色。'+
+                                      '<br> 五声调式在中国传统音乐中具有独特的地位，'+
+                                      '<br> 它不仅是中国民族音乐的基础，也是中国传统音乐的重要组成部分。'+
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    },
+                },{
+                    name:'民族乐器',
+                    value:[250,725],
+                    symbolSize:80,
+                    label:{
+                        position:'left',
+                        offset:[-50,0]
+                    },
+                    tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+							var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:50px;border-radius:5px;color:pink">' +
+                                      '民族乐器'+
+                                      '</div>';
+                            return tipHtml;
+						}
+                    }
+                },{
+                    name:'中国民族音乐听感的重要组成部分',
+                    value:[650,725],
+                    symbolSize:20,
+                    label:{offset:[10,0]},
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: 'cyan',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:120px;width:400px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      ' 民族乐器是民族音乐听感的重要组成部分。'+
+                                      '<br> 在漫长的历史长河中，中华民族发明了各种形态各异的乐器，'+
+                                      '<br> 并积极吸收外来文化，从而形成了如今的民族乐器。'+
+                                      '<br> 最为知名的包括古筝、二胡、琵琶、笛子、箫、唢呐等。'+
+                                      '<br> 中国民族乐器历经数千年演变，音色各具神韵，'+
+							     	  '<br> 既是传统音乐载体，也是中华文化精神的象征。'+
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    },
+                },{
+                    name:'少数民族民歌',
+                    value:[250,550],
+                    symbolSize:80,
+                    label:{
+                        position:'left',
+                        offset:[-50,0]
+                    },
+                   tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+						var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:50px;border-radius:5px;color:pink">' +
+                                      ' 少数民族民歌'+
+                                      '</div>';
+                            return tipHtml;
+						}
+                    }
+                },{
+                    name:'各具特色，民族特征明显',
+                    value:[650,550],
+                    symbolSize:20,
+                    label:{offset:[10,0]},
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: 'cyan',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:100px;width:420px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '各民族发展出不同的歌唱形式与声腔，包括朝鲜族"盘索里"、'+
+                                      '<br>"藏族"囊玛"、蒙古族"长调"、维吾尔族"十二木卡姆"等。'+
+                                      '<br>其中，"侗族大歌"作为东亚地区唯一的复调音乐，'+
+                                      '<br>对于传统音乐学人对东亚音乐没有织体的错误观念产生了极大冲击，'+
+                                      '<br>体现出了我国民族音乐的复杂性与独特魅力。' 
+									  '</div>';
+                            return tipHtml;
+                        }
+                    },
+                },{
+                    
+                    name:'民歌地域差异',
+                    value:[250,375],
+                    symbolSize:80,
+                    label:{
+                        position:'left',
+                        offset:[-50,0]
+                    },
+                    tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+						var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:50px;border-radius:5px;color:pink">' +
+                                      ' 民歌地域差异'+
+                                      '</div>';
+                            return tipHtml;
+						}
+                    }
+                },{
+                    name:'地理环境引起了不同地区的民歌风格差异',
+                    value:[650,375],
+                    symbolSize:20,
+                    label:{offset:[10,0]},
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: 'cyan',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:120px;width:420px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '不同的自然条件、综合地理环境，催生了多样的音乐表现形式。'+
+                                      '<br>例如，黄土高原地区的陕北信天游受开阔地形影响，旋律高亢奔放；'+
+                                      '<br>而江南水乡的吴歌则节奏细腻，旋律婉转。'+
+                                      '<br>高山、平原、盆地、河谷等自然条件，有着不同的植被覆盖、'+
+                                      '<br>气候条件和交通可达性。它们不仅塑造了不同的生活方式，'+
+                                      '<br>也深刻影响了当地音乐的节奏感、音域和表现力。'
+                                      '</div>';
+                            return tipHtml;
+                        }
+					},
+                },{
+                    name:'文化遗产保护',
+                    value:[250,200],
+                    symbolSize:80,
+                    label:{
+                        position:'left',
+                        offset:[-50,0]
+                    },
+                    tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+							var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:50px;border-radius:5px;color:pink">' +
+                                      ' 文化遗产保护'+
+                                      '</div>';
+                            return tipHtml;
+						}
+                    }
+                },{
+                    name:'对民乐开展了收集、整理、保护工作',
+                    value:[650,200],
+                    symbolSize:20,
+                    label:{offset:[10,0]},
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: 'cyan',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:85px;width:400px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '从20世纪中期起，大量音乐学家深入民族地区进行田野调查，'+
+                                      '<br>采集、记录民歌与乐器演奏形式，记录乐谱编撰成书或录音保存。'+
+                                      '<br>同时，许多传统民乐被列入国家级非物质文化遗产名录，'+     
+                                      '<br>得到系统性的保护和传承。'+                          
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    },
+                }],
+            },{
+                name:'民族音乐介绍',
+                type:"effectScatter",
+                coordinateSystem:'cartesian2d',
+                silent:true,
+                rippleEffect:{
+                    brushType:'stroke',
+                    scale:1.7
+                },
+                itemStyle:{
+                    color:'#99CCFF'
+                },
+                data:[{
+                    value:[250,900],
+                    symbolSize:80
+                },{
+                    value:[250,725],
+                    symbolSize:80
+                },{
+                    value:[250,550],
+                    symbolSize:80
+                },{
+                    value:[250,375],
+                    symbolSize:80
+                },{
+                    value:[250,200],
+                    symbolSize:80
+                }]
+            },{
+                name:'民族音乐介绍',
+                type:'lines',
+                coordinateSystem:'cartesian2d',
+                zlevel:2,
+                effect:{
+                    show:true,
+                    symbolSize:10,
+                    symbol:'triangle'
+                },
+                tooltip:{
+                    show:false
+                },
+                lineStyle:{
+                    curveness:0.1,
+                    opacity:0.2,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0, color: 'red'
+                    }, {
+                        offset: 1, color: 'yellow'
+                    }], false),
+                    width: 3,
+                },
+                data:[
+                      {coords:[[250,900],[250,725]],lineStyle:{curveness:0}},
+                      {coords:[[250,725],[250,550]],lineStyle:{curveness:0}},
+                      {coords:[[250,550],[250,375]],lineStyle:{curveness:0}},
+                      {coords:[[250,375],[250,200]],lineStyle:{curveness:0}},
+                      
+                      {coords:[[250,900],[650,900]]},                      
+                      {coords:[[250,725],[650,725]]},                     
+                      {coords:[[250,550],[650,550]]},                 
+                      {coords:[[250,375],[650,375]]},
+                      {coords:[[250,200],[650,200]]},
+                    ]
+            },{
+                name:'音乐文化研究',
+                type:'graph',
+                draggable: false,
+                coordinateSystem: "cartesian2d",
+                label:{
+                    show:true,
+                    position:'right',
+                    fontSize:22
+                },
+                itemStyle:{
+                    color:'#1AE66B'
+                },
+                animation: false,
+                data:[{
+                    name:'民族音乐保护',
+                    value:[500,500],
+                    symbolSize:150,
+                    label:{
+                        position:'middle',
+                        offset:[0,-80],
+                        textStyle: {
+                            fontSize: 28,
+                            fontWeight:'bolder'
+                        },
+                    },
+                    tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:400px;border-radius:5px;color:pink">' +
+                                      ' 通过对重要民族音乐整理研究的项目解读，初步了解中国音乐文化保护历史'+
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    }
+                },{
+                    name:'研究项目',
+                    value:[350,500],
+                    symbolSize:80,
+                    label:{
+                        position:'right',
+                        offset:[-20,-80],
+                        textStyle: {
+                            fontWeight:'bold'
+                        },
+                    },
+                    tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+						var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:360px;border-radius:5px;color:pink">' +
+                                      ' 供水盈亏、防污治理、民生经济、资金流动、人员编制......'+
+                                      '</div>';
+                            return tipHtml;
+						}
+                    }
+                },{
+                    name:'出版工程',
+                    value:[650,500],
+                    symbolSize:80,
+                    label:{
+                        position:'left',
+                        offset:[20,-80],
+                        textStyle: {
+                            fontWeight:'bold'
+                        },
+                    },
+                    tooltip:{
+                        show:true,
+                        padding:0,
+                        formatter:function(params){
+						var tipHtml = '';
+                            tipHtml = '<div style="height:20px;width:370px;border-radius:5px;color:pink">' +
+                                      '水资源分配、路线规划、生产建设、地点选址、设施巩固......'+
+                                      '</div>';
+                            return tipHtml;
+						}
+                    }
+                },{
+                    name:'民族民间音乐“采风”活动',
+                    value:[700,750],
+                    symbolSize:20,
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:165px;width:425px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '主办方：中央音乐学院民族音乐研究所'+
+                                      '<br>研究时间段：1950-1970'+
+                                      '<br>1950年，中央音乐学院成立“民族音乐研究部”，依此为开端，一批'+
+                                      '<br>以“民族音乐”为研究对象的专门研究机构相继在各地建立。在这些'+
+                                      '<br>机构的主持下，大量的民族音乐收集“采风”活动得以开展，如1953'+
+							          '<br>年由杨荫浏先生组织进行的对于山西河曲地区民间歌曲的采风活动。'+
+									  '<br>大量的民族音乐文化，如新疆的十二木卡姆、贵州的侗族大歌、以及'+
+                                      '<br>苏南吹打、福建南音等等，都是那时期极有价值的发掘。'+
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    },
+                },{
+                    name:'《中国民族民间音乐集成》',
+                    value:[725,500],
+                    symbolSize:20,
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml =  '<div style="height:145px;width:425px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '启动时间：1988年      出版方：中国ISBN中心'+
+                                      '<br>作者：《中国民间歌曲集成》全国编辑委员会'+
+                                      '<br>20 世纪 80 年代开始编纂，由全国30个省市（区）文化厅等参与，'+
+                                      '<br>文化部民族民间文艺发展中心统筹出版，耗时30年，完成《中国民间'+
+							          '<br>歌曲集成》《中国戏曲音乐集成》《中国民族民间器乐曲集成》《中'+
+									  '<br>国曲艺音乐集成》4部119卷集成志书，全面系统收集整理了各地戏曲'+
+                                      '<br>音乐、民族民间器乐曲等，是目前研究民族音乐最为丰富翔实的资料。'+
+                                      '</div>';
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    },
+                },{
+                    name:'中华民族音乐传承出版工程',
+                    value:[700,250],
+                    symbolSize:20,
+                    tooltip:{
+                        show:true,
+                        padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        formatter:function(params){
+                            var tipHtml = '';
+                            tipHtml = '<div style="height:120px;width:460px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '启动时间：2021年'+
+                                      '<br>主办方：中国共产党中央委员会宣传部'+
+                                      '<br>该工程通过挖掘整理中华民族音乐资源，采用录音、录像、文字记录等方'+
+									  '<br>式收集整理音乐作品、乐器等，利用现代技术进行修复和数字化转化，出'+
+									  '<br>版了大量的音乐专辑、书籍、音像制品等，如《中国音乐大典出版工程》、'+
+									  '<br>《中国传统音乐录音档案数字化与出版工程》等等。'+
+                                      '</div>';
+                            return tipHtml;
+                        }
+                    }
+                },{
+                    	name:'早期民族音乐整理工作',
+                    	value:[300,900],
+                    	symbolSize:20,
+						label:{
+                        	position:'left',
+						},
+                    	tooltip:{
+                      		show:true,
+                              padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        	formatter:function(params){
+                            	var tipHtml = '';
+                            	tipHtml = '<div style="height：80px;width:480px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '建国前虽没有大规模的民族音乐研究整理项目，但有一些音乐家和学者进行了'+
+                                      '<br>零星的民族音乐收集和整理工作，包括王洛宾先生对于西部青海省、甘肃省、'+
+                                      '<br>维吾尔族、哈萨克族等民族民歌的收集整理，查阜西等琴家发起“今虞琴社”'+
+									  '<br>收集古琴曲谱等等。'+
+                                      '</div>';
+                            	return tipHtml;
+                        }
+                    },
+                },{
+                    	name:'“民族音乐理论”框架提出',
+                    	value:[300,750],
+                    	symbolSize:20,
+						label:{
+                        	position:'left',
+						},
+                    	tooltip:{
+                      		show:true,
+                              padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        	formatter:function(params){
+                            	var tipHtml = '';
+                            	tipHtml = '<div style="height：180px;width:480px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '最早提出“民族音乐理论”这一术语，并把它用作一个独立学科专业名称的，'+
+                                      '<br>是上海音乐学院已故教授沈知白先生。1956年，上海音乐学院成立民族音乐'+
+                                      '<br>系，沈先生为系主任，即创设了“民族音乐理论专业”。接着，已故教授于会'+
+									  '<br>泳先生又提出了“民族音乐理论专业”最初的学科框架，分为纵向研究"和'+
+									  '<br>"横向研究"。"纵向研究"包括"民间歌曲研究"、"民族器乐研究"、"戏曲音'+
+									  '<br>乐研究"和"曲艺音乐研究"等四门，属于门类性质的研究；“横向研究”则是'+
+							          '<br>综合性专题研究，包括：“腔同关系研究”、“句式研究”、“结构规律研究”、'+
+								      '<br>“宫调·旋法研究”等，构建起横跨中西音乐理论的研究框架。'+
+
+                                      '</div>';
+                            	return tipHtml;
+                        }
+                    },
+                },{
+                    	name:'《民族音乐概论》',
+                    	value:[300,600],
+                    	symbolSize:20,
+						label:{
+                        	position:'left',
+						},
+                    	tooltip:{
+                      		show:true,
+                              padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        	formatter:function(params){
+                            	var tipHtml = '';
+                            	tipHtml = '<div style="height：180px;width:480px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '编纂时间：1950年'+
+                                      '<br>主办方：中国音乐研究所（中央音乐学院民族音乐研究部）'+
+                                      '<br>《民族音乐概论》一书是由中国音乐研究所（即中央音乐学院民族音乐研究部）'+
+									  '<br> 挑头，于1960年组织全国音乐、艺术院校部分师生及部分单位的音乐工作者'+
+									  '<br>	同该所研究人员共60人集体编写，由郭乃安等先生统修而成，并于1964年作'+
+									  '<br>	为中央音乐学院民族音乐课试用教材正式出版。这本书出版后，很快就成为'+
+							          '<br> 全国各音乐院校民族音乐课程的重要参考资料；之后，“民族音乐理论”作为'+
+								      '<br>	一个专业，也就从学术上被确认和稳定下来。'+
+
+                                      '</div>';
+                            	return tipHtml;
+                        }
+                    },
+                },{
+                    	name:'《收集整理我国民族音乐遗产规划》',				
+                    	value:[300,450],
+                    	symbolSize:20,
+						label:{
+                        	position:'left',
+						},
+                    	tooltip:{
+                      		show:true,
+                              padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        	formatter:function(params){
+                            	var tipHtml = '';
+                            	tipHtml = '<div style="height:150px;width:490px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '启动时间：1979年'+
+                                      '<br>主办方：文化部、中国音协'+
+                                      '<br>“文革”结束后，文化部、中国音协联合发起对我国民族民间音乐进行一次全面'+
+									  '<br>系统的收集、整理，要求全国各地重新启动这一工程，并全面详尽地对戏曲音乐、'+
+									  '<br>民族民间器乐曲、曲艺音乐和古琴曲等我国极为丰富的民族民间音乐遗产进行'+
+									  '<br>	“有计划、有步骤和系统、全面地收集整理”。由此，一项浩繁的音乐文化基础'+
+									  '<br>	建设工程全面拉开了序幕，并最终形成了《中国民族民间音乐集成》系列丛书。'+
+                                      '</div>';
+                            	return tipHtml;
+                        }
+                    },
+                },{
+                    	name:'《中国传统音乐考察报告研究》',
+                    	value:[300,300],
+                    	symbolSize:20,
+						label:{
+                        	position:'left',
+						},
+                    	tooltip:{
+                      		show:true,
+                              padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        	formatter:function(params){
+                            	var tipHtml = '';
+                            	tipHtml = '<div style="height:120px;width:485px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '发布时间：2019 年'+
+                                      '<br>来源：中国艺术研究院'+
+									  '<br>全书 10 卷，收录 20 世纪 50-60 年代音乐研究所采访、整理、编印的部分'+
+								      '<br>传统音乐考察报告及音响资料，由编委会整理排序，集文字与音响资料于一体，'+
+								      '<br>体现了该院对传统音乐文化保护传承的成果，展示了前辈学者的考察方法与学'+
+                                      '<br>术精神。'
+                                      '</div>';
+                            	return tipHtml;
+                        }
+                    },
+                },{
+                    	name:'《中国民间音乐探源溯流与\n中华文化传承发展研究》',
+                    	value:[300,150],
+                    	symbolSize:20,
+						label:{
+                        	position:'left',
+						},
+                    	tooltip:{
+                      		show:true,
+                              padding:5,
+                        borderColor: '#1AE66B',
+                        borderWidth: 2,
+                        	formatter:function(params){
+                            	var tipHtml = '';
+                            	tipHtml = '<div style="height:190px;width:500px;border-radius:5px;background:rgba(50,50,50,0.3);color:white">' +
+                                      '发布时间：2024年'+
+                                      '<br>来源：中央音乐学院'+
+                                      '<br>该项目为2024 年度国家社科基金艺术学重大项目，于2024年11月28日顺利开题。'+
+									  '<br>项目以中国古代俗乐为首要对象，从历史文献等中厘清其历史渊源等，以民间音乐'+
+									  '<br>为切入点，承载着挖掘和弘扬优秀传统文化、彰显民族文化独特价值的重任。'+
+									  '<br>项目拟通过系统研究民间音乐的历史渊源、艺术特质、文化价值和传承机制，以实'+
+							          '<br>际行动落实党的二十大报告关于“推进文化自信自强，铸就社会主义文化新辉煌”'+
+								      '<br>的战略部署，践行新时代文化建设的理论要求，助力中华民族的精神追求和文化'+
+                                      '<br>标识更广泛地传播和弘扬。'+
+                                      '</div>';
+                            	return tipHtml;
+                        }
+                    },
+                },{
+                    	name:'相关网站：中国音乐家协会 中国共产党中央委员会宣传部 中华人民共和国文化和旅游部',
+                    	value:[500,0],
+                    	symbolSize:0.0001,
+						label:{
+                        	position:'middle',
+							offset:[-350,-20]
+						},
+                }],
+            },{
+                name:'音乐文化研究',
+                type:"effectScatter",
+                coordinateSystem:'cartesian2d',
+                silent:true,
+                rippleEffect:{
+                    brushType:'stroke',
+                    scale:3
+                },
+                itemStyle:{
+                    color:'#90F7CE'
+                },
+                data:[{
+                    value:[500,500],
+                    symbolSize:150
+                },{
+                    value:[350,500],
+                    symbolSize:80
+                },{
+                    value:[650,500],
+                    symbolSize:80
+            
+                }]
+            },{
+                name:'音乐文化研究',
+                type:'lines',
+                coordinateSystem:'cartesian2d',
+                zlevel:2,
+                effect:{
+                    show:true,
+                    symbolSize:10,
+                    symbol:'triangle'
+                },
+                tooltip:{
+                    show:false
+                },
+                lineStyle:{
+                    curveness:0,
+                    opacity:0.2,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0, color: '#58B3CC'
+                    }, {
+                        offset: 1, color: '#F58158'
+                    }], false),
+                    width: 2,
+                },
+                data:[
+                      {coords:[[500,500],[350,500]],lineStyle:{curveness:0}},
+                      {coords:[[500,500],[650,500]],lineStyle:{curveness:0}},
+                      {coords:[[700,750],[725,500]],lineStyle:{curveness:0.1}},
+					  {coords:[[725,500],[700,250]],lineStyle:{curveness:0.1}},
+					  {coords:[[650,500],[700,750]],lineStyle:{curveness:0.1}},
+					  {coords:[[700,250],[650,500]],lineStyle:{curveness:0.1}},				
+                      {coords:[[350,500],[300,900]],lineStyle:{curveness:-0.1}},
+                      {coords:[[350,500],[300,750]],lineStyle:{curveness:-0.1}},
+					  {coords:[[350,500],[300,600]],lineStyle:{curveness:-0.1}},
+					  {coords:[[350,500],[300,450]],lineStyle:{curveness:0.1}},
+					  {coords:[[350,500],[300,300]],lineStyle:{curveness:0.1}},
+					  {coords:[[350,500],[300,150]],lineStyle:{curveness:0.1}},
+                    ]
+            },
+],
+            animationDuration:5000,
+            animationDelay:500
+        }
+
+if(option){
+myChart.setOption(option);
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
